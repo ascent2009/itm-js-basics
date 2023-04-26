@@ -4,4 +4,10 @@
  * */
 function chunk(arr, size) {
     // Your code
+    let sliced = [];
+    for (let i = 0; i < arr.length; i += size) {
+        let subArr = arr.slice(i, i + size);
+        sliced.push(subArr);
+    }
+    return sliced;
 }
