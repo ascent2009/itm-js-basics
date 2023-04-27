@@ -5,6 +5,10 @@
  равно ключу. Например, groupBy([{id: 1, name: 'Alice'}, {id: 2, name: 'Bob'}, {id: 3, name: 'Alice'}], 'name') должна
  вернуть {Alice: [{id: 1, name: 'Alice'}, {id: 3, name: 'Alice'}], Bob: [{id: 2, name: 'Bob'}]}.
  * */
-function groupBy(arr) {
+function groupBy(arr, key) {
     // Your code
+    return arr.reduce((acc, a) => {
+        (acc[a[key]] = acc[a[key]] || []).push(a);
+        return acc;
+    }, {});
 }
