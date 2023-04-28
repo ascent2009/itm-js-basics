@@ -6,4 +6,5 @@
  */
 function intersect(arr1, arr2) {
     // ваш код здесь
+    return arr1.filter((a) => arr2.indexOf(a) >= 0);
 }
