@@ -5,4 +5,9 @@
  * */
 function shuffle(arr1, arr2) {
     // Your code
+    return arr
+        .slice(0, 1)
+        .concat(arr[3])
+        .concat(arr.slice(2, 4))
+        .concat(arr.slice(4));
 }
