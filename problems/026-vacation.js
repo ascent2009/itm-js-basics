@@ -14,7 +14,18 @@
  * @returns {string}
  */
 function vacation(date) {
-    return undefined;
+    let getMonth = date.slice(3, 5);
+    let getDay = date.slice(0, 2);
+    let getYear = date.slice(6);
+    let dateFormatted = `${getMonth}.${getDay}.${getYear}`;
+    let dateTimestamp = new Date(dateFormatted).getTime() + 1209600000;
+    let dateNeeded = new Date(dateTimestamp);
+    let options = {
+        year: "numeric",
+        month: "numeric",
+        day: "numeric",
+    };
+    return dateNeeded.toLocaleString("ru-RU", options);
 }
 
 module.exports = vacation;
