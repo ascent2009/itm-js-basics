@@ -5,4 +5,5 @@
  */
 function uniqueStrings(arr) {
     // ваш код здесь
+    return arr.filter((a, i) => arr.indexOf(a) === i);
 }
