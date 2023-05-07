@@ -5,4 +5,5 @@
  */
 function reverseString(str) {
     // ваш код здесь
+    return str.split("").reverse().join("");
 }
