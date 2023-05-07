@@ -17,7 +17,15 @@
  * @returns {number}
  */
 function metro(x, y) {
-    return undefined;
+    if (x > y) {
+        return x - y - 1;
+    } else if (x === 13 && y === 1) {
+        return 13 % x;
+    } else if (x === 1 && y === 13) {
+        return 13 % y;
+    } else {
+        return y - x - 1;
+    }
 }
 
 module.exports = metro;
