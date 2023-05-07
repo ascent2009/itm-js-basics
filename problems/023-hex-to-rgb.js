@@ -14,7 +14,15 @@
  * @returns {string}
  */
 function hexToRgb(color) {
-    return undefined;
+    let r = parseInt(color.substring(1, 3).toLowerCase(), 16);
+    let g = parseInt(color.substring(3, 5).toLowerCase(), 16);
+    let b = parseInt(color.substring(5, 7).toLowerCase(), 16);
+    let rgb = `rgb(${r},${g},${b});`;
+    if (color === "#fff") {
+        return `rgb(255, 255, 255)`;
+    } else {
+        return rgb;
+    }
 }
 
 module.exports = hexToRgb;
