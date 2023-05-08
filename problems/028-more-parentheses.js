@@ -12,7 +12,13 @@
  * @returns {boolean}
  */
 function parentheses(value) {
-    return undefined;
+    let result = 0;
+    const reg = /\(\)\<\>\{\}\[\])/g;
+    for (let i = 0; i < value.length && result >= 0; i++) {
+        result += value[i] === reg ? 1 : -1;
+    }
+
+    return result === 0;
 }
 
 module.exports = parentheses;
