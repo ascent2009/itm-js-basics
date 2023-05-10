@@ -5,9 +5,10 @@
  */
 function objectToString(obj) {
     // ваш код здесь
+    return Object.entries(obj).join("&").replaceAll(",", "=");
 }
 
 // Примеры:
-console.log(objectToString({a: 1, b: 2, c: 3})); // "a=1&b=2&c=3"
-console.log(objectToString({foo: "hello", bar: "world"})); // "foo=hello&bar=world"
-console.log(objectToString({x: true, y: false})); // "x=true&y=false"
+console.log(objectToString({ a: 1, b: 2, c: 3 })); // "a=1&b=2&c=3"
+console.log(objectToString({ foo: "hello", bar: "world" })); // "foo=hello&bar=world"
+console.log(objectToString({ x: true, y: false })); // "x=true&y=false"
