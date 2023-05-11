@@ -5,6 +5,7 @@
  */
 function factorial(n) {
     // ваш код здесь
+    return n !== 1 ? n * factorial(n - 1) : n;
 }
 
 // Примеры:
