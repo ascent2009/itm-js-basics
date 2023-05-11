@@ -6,6 +6,10 @@
  */
 function gcd(a, b) {
     // ваш код здесь
+    if (b === 0) {
+        return a;
+    }
+    return gcd(b, a % b);
 }
 
 // Примеры:
