@@ -5,27 +5,16 @@
  */
 function isPalindrome(str) {
     // ваш код здесь
-    let string = str
+    str = str
         .replaceAll(" ", "")
         .replaceAll(",", "")
         .replaceAll(":", "")
         .toLowerCase();
 
-    if (string.length <= 1) {
-        return true;
-    }
-    let firstLetter = string[0];
-    let lastLetter = string[string.length - 1];
+    if (str.length == 1) return true;
+    if (str[0] !== str[str.length - 1]) return false;
 
-    if (firstLetter === lastLetter) {
-        let stringWithoutFirstAndLastLetters = string.substring(
-            1,
-            string.length - 1
-        );
-        return isPalindrome(stringWithoutFirstAndLastLetters);
-    } else {
-        return false;
-    }
+    return isPalindrome(str.slice(1, -1));
 }
 
 // Примеры:
