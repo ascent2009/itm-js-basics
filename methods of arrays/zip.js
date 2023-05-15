@@ -7,14 +7,14 @@
 function zip(arr1, arr2) {
     // Your code
     let result = [];
-    for (let i = 0; i < array1.length; i += 1) {
-        let arr = [array1[i], array2[i]];
+    for (let i = 0; i < arr1.length; i++) {
+        let arr = [arr1[i], arr2[i]];
         result.push(arr);
     }
-    if (array1.length > array2.length) {
-        result.length = array2.length;
+    if (arr1.length > arr2.length) {
+        result.length = arr2.length;
     } else {
-        result.length = array1.length;
+        result.length = arr1.length;
     }
     return result;
 }
